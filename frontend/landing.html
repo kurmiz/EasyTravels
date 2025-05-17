@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Bhairahawa Tourism - Gateway to Lumbini, the birthplace of Lord Buddha. Sign up or log in to explore.">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Welcome to Bhairahawa Tourism</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/landing.css">
+
+    <!-- Authentication Check -->
+    <script src="js/authClient.js"></script>
+    <script>
+        // Redirect to index.html if already authenticated
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.AuthClient && window.AuthClient.isAuthenticated()) {
+                window.location.href = 'index.html';
+            } else {
+                // Fallback check
+                const authData = localStorage.getItem('auth');
+                if (authData) {
+                    try {
+                        const parsedAuthData = JSON.parse(authData);
+                        const expiresAt = new Date(parsedAuthData.expiresAt);
+
+                        // Check if token is not expired
+                        if (new Date() < expiresAt) {
+                            window.location.href = 'index.html';
+                        }
+                    } catch (error) {
+                        // Invalid auth data, do nothing
+                    }
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Landing Section -->
+    <section class="landing-section">
+        <div class="landing-container">
+            <div class="landing-content">
+                <div class="landing-logo">
+                    <h1>BHAIR<span>AHAWA</span></h1>
+                    <h2>Gateway to Lumbini - Birthplace of Lord Buddha</h2>
+                </div>
+
+                <div class="landing-text">
+                    <p>Discover the best places to visit in Bhairahawa, the gateway to Lumbini. Book your transportation and make your journey memorable!</p>
+                </div>
+
+                <div class="landing-buttons">
+                    <a href="login.html" class="btn login-btn">Login</a>
+                    <a href="signup.html" class="btn signup-btn">Sign Up</a>
+                </div>
+
+                <div class="landing-features">
+                    <div class="feature">
+                        <i class='bx bx-map'></i>
+                        <div class="feature-text">
+                            <h3>Explore Places</h3>
+                            <p>Discover beautiful destinations around Bhairahawa and Lumbini</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <i class='bx bx-car'></i>
+                        <div class="feature-text">
+                            <h3>Book Transportation</h3>
+                            <p>Find and book the best transportation options for your journey</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <i class='bx bx-calendar'></i>
+                        <div class="feature-text">
+                            <h3>Plan Your Trip</h3>
+                            <p>Create personalized itineraries for your visit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="landing-image">
+                <img src="images/lumbini.jpg" alt="Lumbini - Birthplace of Buddha">
+                <div class="image-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Bhairahawa Tourism. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

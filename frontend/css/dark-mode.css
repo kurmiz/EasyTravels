@@ -1,0 +1,350 @@
+/**
+ * Dark Mode CSS for Bhairahawa Tourism Website
+ * This file contains dark theme styles that override the default light theme
+ */
+
+/* Dark Mode Variables */
+:root.dark-mode {
+    /* Main Colors */
+    --bg-color: #121212;
+    --bg-light: #1e1e1e;
+    --bg-dark: #0a0a0a;
+    --text-color: #e0e0e0;
+    --text-light: #b0b0b0;
+    --text-muted: #909090;
+    --border-color: #333333;
+    --input-border: #444444;
+    --input-bg: #252525;
+
+    /* Primary Colors - Keep the same for brand consistency */
+    --primary-color: #ff9100;
+    --primary-dark: #e67e00;
+    --primary-light: #ffb04d;
+    --primary-color-rgb: 255, 145, 0;
+
+    /* Status Colors */
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --error-color: #f44336;
+    --info-color: #2196f3;
+
+    /* Shadow Variables */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Body and General Elements */
+body.dark-mode {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: #ffffff;
+}
+
+.dark-mode p {
+    color: var(--text-color);
+}
+
+/* Header */
+.dark-mode header {
+    background-color: var(--bg-dark);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .logo {
+    color: #ffffff;
+}
+
+.dark-mode .navbar a {
+    color: var(--text-color);
+}
+
+.dark-mode .navbar a:hover,
+.dark-mode .navbar a.active {
+    color: var(--primary-color);
+}
+
+/* Search Box */
+.dark-mode .search-box input {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border-color: var(--input-border);
+}
+
+.dark-mode .search-box button {
+    background-color: var(--primary-color);
+}
+
+/* User Menu */
+.dark-mode .user-name {
+    color: var(--text-color);
+}
+
+.dark-mode .logout-btn {
+    background-color: transparent;
+    color: var(--text-color);
+    border-color: var(--input-border);
+}
+
+.dark-mode .logout-btn:hover {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+    border-color: #f44336;
+}
+
+/* Fix for bookings button hover text color in dark mode */
+.dark-mode .bookings-btn:hover {
+    background-color: var(--primary-color);
+    color: white !important;
+    border-color: var(--primary-color);
+}
+
+/* Sections */
+.dark-mode .section-header h2 {
+    color: #ffffff;
+}
+
+.dark-mode .section-header p {
+    color: var(--text-light);
+}
+
+/* About Section */
+.dark-mode .about {
+    background-color: var(--bg-light);
+}
+
+.dark-mode .about-text h3,
+.dark-mode .about-text h4 {
+    color: #ffffff;
+}
+
+.dark-mode .about-features li {
+    color: var(--text-color);
+}
+
+/* Places Section */
+.dark-mode .filter-btn {
+    background-color: transparent;
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.dark-mode .filter-btn:hover,
+.dark-mode .filter-btn.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+.dark-mode .place-card {
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow-md);
+}
+
+.dark-mode .place-info {
+    background-color: var(--bg-light);
+}
+
+.dark-mode .place-header h4 {
+    color: #ffffff;
+}
+
+.dark-mode .place-info p {
+    color: var(--text-light);
+}
+
+/* Transport Section */
+.dark-mode .c-mainbox {
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow-md);
+}
+
+.dark-mode .container-text h4 {
+    color: #ffffff;
+}
+
+.dark-mode .container-text p {
+    color: var(--text-light);
+}
+
+.dark-mode .price {
+    color: var(--primary-color);
+}
+
+/* Testimonials Section */
+.dark-mode .testimonial-card {
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow-md);
+}
+
+.dark-mode .testimonial-text p {
+    color: var(--text-color);
+}
+
+.dark-mode .testimonial-author h4 {
+    color: #ffffff;
+}
+
+.dark-mode .testimonial-author p {
+    color: var(--text-light);
+}
+
+/* Contact Section */
+.dark-mode .contact-info {
+    background-color: var(--bg-light);
+}
+
+.dark-mode .contact-info h3 {
+    color: #ffffff;
+}
+
+.dark-mode .contact-info-item p {
+    color: var(--text-light);
+}
+
+.dark-mode .contact-form {
+    background-color: var(--bg-light);
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border-color: var(--input-border);
+}
+
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(255, 145, 0, 0.2);
+}
+
+/* Footer */
+.dark-mode footer {
+    background-color: var(--bg-dark);
+}
+
+.dark-mode .footer-box h3 {
+    color: #ffffff;
+}
+
+.dark-mode .footer-box p {
+    color: var(--text-light);
+}
+
+.dark-mode .footer-links a {
+    color: var(--text-light);
+}
+
+.dark-mode .footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.dark-mode .footer-subscribe input {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border-color: var(--input-border);
+}
+
+.dark-mode .copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-muted);
+}
+
+/* Buttons */
+.dark-mode .btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.dark-mode .btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Booking Page */
+.dark-mode .booking-form-container,
+.dark-mode .booking-info-container {
+    background-color: var(--bg-light);
+}
+
+.dark-mode .booking-card {
+    background-color: var(--bg-light);
+    border-top-color: var(--primary-color);
+}
+
+.dark-mode .booking-detail {
+    border-bottom-color: var(--border-color);
+}
+
+.dark-mode .no-bookings,
+.dark-mode .loading-bookings,
+.dark-mode .error-bookings {
+    background-color: var(--bg-light);
+}
+
+/* Nightlife Page */
+.dark-mode .nightlife-card {
+    background-color: var(--bg-light);
+}
+
+.dark-mode .nightlife-card-content h3 {
+    color: #ffffff;
+}
+
+.dark-mode .nightlife-card-content p {
+    color: var(--text-light);
+}
+
+.dark-mode .nightlife-card-meta {
+    border-top-color: var(--border-color);
+}
+
+.dark-mode .tip-item {
+    background-color: var(--bg-light);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.dark-mode-toggle i {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.dark-mode .dark-mode-toggle i {
+    color: var(--primary-color);
+}
+
+/* Animation for toggle */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.dark-mode-toggle:active i {
+    animation: rotate 0.5s ease;
+}
+
+/* Fix for chatbot button hover text color in dark mode */
+.dark-mode .chat-btn:hover {
+    color: white !important;
+    background-color: var(--primary-dark);
+}

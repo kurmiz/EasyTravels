@@ -1,0 +1,488 @@
+/**
+ * Responsive CSS file for Bhairahawa Tourism Website
+ *
+ * This file contains media queries for responsive design
+ * Mobile-first approach with breakpoints for larger screens
+ */
+
+/* ===== MOBILE FIRST APPROACH ===== */
+/* Base styles are for mobile (up to 576px) */
+
+/* ===== TABLET (576px and up) ===== */
+@media (min-width: 576px) {
+    /* Typography */
+    :root {
+        --h1-size: 3rem;
+        --h2-size: 2.25rem;
+        --h3-size: 1.75rem;
+        --h4-size: 1.35rem;
+    }
+
+    /* Grid adjustments */
+    .sm-col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+    .sm-col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+    .sm-col-3 { flex: 0 0 25%; max-width: 25%; }
+    .sm-col-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+    .sm-col-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+    .sm-col-6 { flex: 0 0 50%; max-width: 50%; }
+    .sm-col-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+    .sm-col-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+    .sm-col-9 { flex: 0 0 75%; max-width: 75%; }
+    .sm-col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+    .sm-col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+    .sm-col-12 { flex: 0 0 100%; max-width: 100%; }
+
+    /* Home section */
+    .home-content {
+        max-width: 500px;
+    }
+
+    /* About section */
+    .about-highlight {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Places section */
+    .filter-buttons {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    /* Testimonial section */
+    .testimonial-card {
+        padding: 2rem;
+    }
+
+    /* Contact section */
+    .contact-info-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-info-item i {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+}
+
+/* ===== MEDIUM DEVICES (768px and up) ===== */
+@media (min-width: 768px) {
+    /* Header */
+    .logo {
+        font-size: 1.75rem;
+    }
+
+    /* Grid adjustments */
+    .md-col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+    .md-col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+    .md-col-3 { flex: 0 0 25%; max-width: 25%; }
+    .md-col-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+    .md-col-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+    .md-col-6 { flex: 0 0 50%; max-width: 50%; }
+    .md-col-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+    .md-col-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+    .md-col-9 { flex: 0 0 75%; max-width: 75%; }
+    .md-col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+    .md-col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+    .md-col-12 { flex: 0 0 100%; max-width: 100%; }
+
+    /* About section */
+    .about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    /* Places section */
+    .places-grid, .places-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Place card adjustments */
+    .place-img {
+        height: 220px;
+        aspect-ratio: 16/9;
+    }
+
+    .place-info {
+        padding: 1.25rem;
+    }
+
+    /* Ensure images load properly */
+    .place-img img {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    /* Transport section */
+    .transport-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    /* Container box for transportation options */
+    .container-box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Contact section */
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== LARGE DEVICES (992px and up) ===== */
+@media (min-width: 992px) {
+    /* Header */
+    #menu-icon {
+        display: none;
+    }
+
+    .navbar {
+        display: flex !important;
+    }
+
+    /* Grid adjustments */
+    .lg-col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+    .lg-col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+    .lg-col-3 { flex: 0 0 25%; max-width: 25%; }
+    .lg-col-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+    .lg-col-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+    .lg-col-6 { flex: 0 0 50%; max-width: 50%; }
+    .lg-col-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+    .lg-col-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+    .lg-col-9 { flex: 0 0 75%; max-width: 75%; }
+    .lg-col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+    .lg-col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+    .lg-col-12 { flex: 0 0 100%; max-width: 100%; }
+
+    /* Places section */
+    .places-grid, .places-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+    }
+
+    /* Place card adjustments for better desktop view */
+    .place-img {
+        height: 230px;
+    }
+
+    .place-info {
+        padding: 1.5rem;
+    }
+
+    .place-info p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+        height: 65px;
+        overflow: hidden;
+    }
+
+    /* Transport section adjustments */
+    .container-box {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .c-mainbox {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .container-text h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .container-text p {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .price {
+        font-size: 0.95rem;
+    }
+
+    /* Testimonial section */
+    .testimonial-container {
+        width: 80%;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Chatbot page */
+    .chatbot-container {
+        grid-template-columns: 1fr 350px;
+    }
+}
+
+/* ===== EXTRA LARGE DEVICES (1200px and up) ===== */
+@media (min-width: 1200px) {
+    /* Typography */
+    :root {
+        --h1-size: 3.5rem;
+        --h2-size: 2.5rem;
+        --h3-size: 2rem;
+        --h4-size: 1.5rem;
+    }
+
+    /* Grid adjustments */
+    .xl-col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+    .xl-col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+    .xl-col-3 { flex: 0 0 25%; max-width: 25%; }
+    .xl-col-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+    .xl-col-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+    .xl-col-6 { flex: 0 0 50%; max-width: 50%; }
+    .xl-col-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+    .xl-col-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+    .xl-col-9 { flex: 0 0 75%; max-width: 75%; }
+    .xl-col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+    .xl-col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+    .xl-col-12 { flex: 0 0 100%; max-width: 100%; }
+
+    /* Container width */
+    .container {
+        max-width: 1140px;
+    }
+
+    /* Places section */
+    .places-grid, .places-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Place card adjustments for better desktop view */
+    .place-img {
+        height: 250px;
+    }
+
+    .place-info {
+        padding: 1.5rem;
+    }
+
+    .place-info p {
+        height: 70px;
+    }
+
+    /* Transport section adjustments */
+    .container-box {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        max-width: 1100px;
+    }
+
+    .c-mainbox {
+        padding: 2rem;
+    }
+}
+
+/* ===== MOBILE DEVICES (991px and down) ===== */
+@media (max-width: 991px) {
+    /* Header */
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--bg-light);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 1.5rem 2rem;
+        box-shadow: var(--shadow-md);
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .navbar.open {
+        right: 0;
+    }
+
+    .navbar li {
+        margin: 0.8rem 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding-bottom: 0.8rem;
+    }
+
+    .navbar li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar a {
+        color: var(--text-color);
+        font-size: 1.1rem;
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .navbar a::after {
+        bottom: 0;
+    }
+
+    /* Search input */
+    #search-input.active {
+        width: 200px;
+    }
+}
+
+/* ===== SMALL DEVICES (767px and down) ===== */
+@media (max-width: 767px) {
+    /* Section padding */
+    section {
+        padding: 4rem 0;
+    }
+
+    /* Section headers */
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Home section */
+    .home {
+        padding-top: 6rem;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* About section */
+    .about-highlight {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Places section */
+    .filter-buttons {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .filter-btn {
+        flex: 0 0 auto;
+    }
+
+    /* Transport section */
+    .container-box {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .c-mainbox {
+        padding: 1.75rem;
+    }
+
+    /* Testimonial section */
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    /* Contact section */
+    .contact-info-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ===== EXTRA SMALL DEVICES (575px and down) ===== */
+@media (max-width: 575px) {
+    /* Typography */
+    :root {
+        --h1-size: 2.25rem;
+        --h2-size: 1.75rem;
+        --h3-size: 1.5rem;
+        --h4-size: 1.25rem;
+    }
+
+    /* Section padding */
+    section {
+        padding: 3rem 0;
+    }
+
+    /* Home section */
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .home-buttons .btn {
+        width: 100%;
+    }
+
+    /* About section */
+    .about-highlight {
+        grid-template-columns: 1fr;
+    }
+
+    /* Places section */
+    .places-grid, .places-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .place-img {
+        height: 200px;
+        aspect-ratio: 16/9;
+    }
+
+    .place-info {
+        padding: 1rem;
+    }
+
+    .place-info p {
+        height: auto;
+        max-height: 100px;
+        font-size: 0.9rem;
+    }
+
+    .place-header h4 {
+        font-size: 1.2rem;
+    }
+
+    .place-header h5 {
+        font-size: 0.8rem;
+    }
+
+    /* Improve touch targets for mobile */
+    .btn-small {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    /* Testimonial section */
+    .testimonial-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}

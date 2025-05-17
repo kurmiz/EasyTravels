@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Bhairahawa's vibrant nightlife. Explore restaurants, cafes, and entertainment venues after dark.">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nightlife in Bhairahawa - Experience the City After Dark</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/components.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-hover.css">
+    <link rel="stylesheet" type="text/css" href="css/dark-mode.css">
+
+    <style>
+        /* Nightlife Page Styles */
+        .nightlife-hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .nightlife-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .nightlife-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+
+        .nightlife-content {
+            position: relative;
+            z-index: 3;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .nightlife-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .nightlife-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            line-height: 1.6;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .scroll-down-btn {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        .nightlife-section {
+            padding: 100px 0;
+            background-color: var(--bg-color);
+        }
+
+        .nightlife-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .nightlife-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nightlife-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .nightlife-card-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .nightlife-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .nightlife-card:hover .nightlife-card-img img {
+            transform: scale(1.1);
+        }
+
+        .nightlife-card-content {
+            padding: 20px;
+        }
+
+        .nightlife-card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .nightlife-card-content p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .nightlife-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .nightlife-card-time {
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .nightlife-card-time i {
+            margin-right: 5px;
+            color: var(--primary-color);
+        }
+
+        .nightlife-card-rating {
+            display: flex;
+            align-items: center;
+            color: var(--primary-color);
+        }
+
+        .nightlife-card-rating i {
+            margin-right: 2px;
+        }
+
+        .nightlife-tips {
+            background-color: var(--bg-light);
+            padding: 80px 0;
+        }
+
+        .tips-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .tips-list {
+            margin-top: 30px;
+        }
+
+        .tip-item {
+            display: flex;
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .tip-icon {
+            flex: 0 0 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 20px;
+        }
+
+        .tip-content h4 {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .tip-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .nightlife-title {
+                font-size: 2.5rem;
+            }
+
+            .nightlife-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .nightlife-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tip-item {
+                flex-direction: column;
+            }
+
+            .tip-icon {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+        }
+    </style>
+
+    <!-- Authentication Check -->
+    <script src="js/authClient.js"></script>
+    <script src="js/authCheck.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">BHAIR<span>AHAWA</span></a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#places">Places</a></li>
+            <li><a href="index.html#transport">Transport</a></li>
+            <li><a href="nightlife.html" class="active">Nightlife</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="h-icons">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button"><i class='bx bx-search'></i></button>
+            </div>
+            <a href="#" class="language-toggle"><i class='bx bx-globe'></i></a>
+            <button id="dark-mode-toggle" class="dark-mode-toggle" title="Switch to Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <div class="user-menu">
+                <span class="user-name" id="user-name">User</span>
+                <a href="bookings.html" class="bookings-btn"><i class='bx bx-calendar-check'></i> Book Transport</a>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!-- Nightlife Hero Section with Video -->
+    <section class="nightlife-hero">
+        <video class="nightlife-video" autoplay muted loop>
+            <source src="images/bhw.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="nightlife-overlay"></div>
+        <div class="nightlife-content">
+            <h1 class="nightlife-title">Bhairahawa After Dark</h1>
+            <p class="nightlife-subtitle">Experience the vibrant nightlife of Bhairahawa, from cozy cafes to lively entertainment venues. Discover the city's charm after sunset.</p>
+            <a href="#nightlife-attractions" class="btn">Explore Nightlife</a>
+        </div>
+        <a href="#nightlife-attractions" class="scroll-down-btn">
+            <i class='bx bx-chevrons-down'></i>
+        </a>
+    </section>
+
+    <!-- Nightlife Attractions Section -->
+    <section id="nightlife-attractions" class="nightlife-section">
+        <div class="container">
+            <div class="section-header">
+                <span>Experience the City After Dark</span>
+                <h2>NIGHTLIFE ATTRACTIONS</h2>
+                <div class="section-divider"></div>
+                <p>Discover the best places to visit in Bhairahawa after sunset. From restaurants and cafes to entertainment venues, there's something for everyone.</p>
+            </div>
+
+            <div class="nightlife-grid">
+                <!-- Nightlife Card 1 -->
+                <div class="nightlife-card">
+                    <div class="nightlife-card-img">
+                        <img src="images/restaurant.jpg" alt="Fine Dining Restaurants">
+                    </div>
+                    <div class="nightlife-card-content">
+                        <h3>Fine Dining Restaurants</h3>
+                        <p>Experience exquisite cuisine at Bhairahawa's finest restaurants offering both local and international dishes in elegant settings.</p>
+                        <div class="nightlife-card-meta">
+                            <div class="nightlife-card-time">
+                                <i class='bx bx-time'></i>
+                                <span>6:00 PM - 11:00 PM</span>
+                            </div>
+                            <div class="nightlife-card-rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nightlife Card 2 -->
+                <div class="nightlife-card">
+                    <div class="nightlife-card-img">
+                        <img src="images/cafe.jpg" alt="Cozy Cafes">
+                    </div>
+                    <div class="nightlife-card-content">
+                        <h3>Cozy Cafes</h3>
+                        <p>Relax in charming cafes offering a variety of coffees, teas, and delicious desserts in a comfortable atmosphere.</p>
+                        <div class="nightlife-card-meta">
+                            <div class="nightlife-card-time">
+                                <i class='bx bx-time'></i>
+                                <span>4:00 PM - 12:00 AM</span>
+                            </div>
+                            <div class="nightlife-card-rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bx-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nightlife Card 3 -->
+                <div class="nightlife-card">
+                    <div class="nightlife-card-img">
+                        <img src="images/market.jpg" alt="Night Markets">
+                    </div>
+                    <div class="nightlife-card-content">
+                        <h3>Night Markets</h3>
+                        <p>Explore vibrant night markets offering local crafts, souvenirs, and delicious street food in a lively atmosphere.</p>
+                        <div class="nightlife-card-meta">
+                            <div class="nightlife-card-time">
+                                <i class='bx bx-time'></i>
+                                <span>7:00 PM - 1:00 AM</span>
+                            </div>
+                            <div class="nightlife-card-rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bx-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nightlife Tips Section -->
+    <section class="nightlife-tips">
+        <div class="tips-container">
+            <div class="section-header">
+                <span>Make the Most of Your Evening</span>
+                <h2>NIGHTLIFE TIPS</h2>
+                <div class="section-divider"></div>
+                <p>Follow these tips to ensure a safe and enjoyable experience while exploring Bhairahawa's nightlife.</p>
+            </div>
+
+            <div class="tips-list">
+                <div class="tip-item">
+                    <div class="tip-icon">
+                        <i class='bx bx-taxi'></i>
+                    </div>
+                    <div class="tip-content">
+                        <h4>Transportation</h4>
+                        <p>Use reliable transportation services like taxis or book through our transport service. Avoid walking alone in unfamiliar areas late at night.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon">
+                        <i class='bx bx-wallet'></i>
+                    </div>
+                    <div class="tip-content">
+                        <h4>Carry Local Currency</h4>
+                        <p>Many smaller establishments may not accept credit cards. Carry sufficient Nepalese Rupees for your evening activities.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon">
+                        <i class='bx bx-time-five'></i>
+                    </div>
+                    <div class="tip-content">
+                        <h4>Opening Hours</h4>
+                        <p>Most nightlife venues in Bhairahawa operate between 6:00 PM and 12:00 AM. Some restaurants and cafes may close earlier.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <div class="tip-icon">
+                        <i class='bx bx-phone'></i>
+                    </div>
+                    <div class="tip-content">
+                        <h4>Emergency Contacts</h4>
+                        <p>Save important phone numbers: Police (100), Tourist Police (01-4247041), and our 24/7 tourist helpline (071-520111).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Nightlife Events Section -->
+    <section class="nightlife-section">
+        <div class="container">
+            <div class="section-header">
+                <span>What's Happening</span>
+                <h2>POPULAR EVENTS</h2>
+                <div class="section-divider"></div>
+                <p>Check out these recurring events and special celebrations that make Bhairahawa's nightlife unique.</p>
+            </div>
+
+            <div class="nightlife-grid">
+                <!-- Event Card 1 -->
+                <div class="nightlife-card">
+                    <div class="nightlife-card-img">
+                        <img src="images/music.jpg" alt="Live Music Nights">
+                    </div>
+                    <div class="nightlife-card-content">
+                        <h3>Live Music Nights</h3>
+                        <p>Enjoy performances by local and visiting musicians at various venues throughout the city every Friday and Saturday night.</p>
+                        <div class="nightlife-card-meta">
+                            <div class="nightlife-card-time">
+                                <i class='bx bx-calendar'></i>
+                                <span>Weekends</span>
+                            </div>
+                            <a href="#" class="btn-small">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="nightlife-card">
+                    <div class="nightlife-card-img">
+                        <img src="images/cultural.jpg" alt="Cultural Performances">
+                    </div>
+                    <div class="nightlife-card-content">
+                        <h3>Cultural Performances</h3>
+                        <p>Experience traditional Nepali dance and music performances showcasing the rich cultural heritage of the region.</p>
+                        <div class="nightlife-card-meta">
+                            <div class="nightlife-card-time">
+                                <i class='bx bx-calendar'></i>
+                                <span>Wednesdays</span>
+                            </div>
+                            <a href="#" class="btn-small">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="nightlife-card">
+                    <div class="nightlife-card-img">
+                        <img src="images/festival.jpg" alt="Seasonal Festivals">
+                    </div>
+                    <div class="nightlife-card-content">
+                        <h3>Seasonal Festivals</h3>
+                        <p>Join the celebrations during major Nepali festivals like Dashain, Tihar, and Holi with special events throughout the city.</p>
+                        <div class="nightlife-card-meta">
+                            <div class="nightlife-card-time">
+                                <i class='bx bx-calendar'></i>
+                                <span>Seasonal</span>
+                            </div>
+                            <a href="#" class="btn-small">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-box">
+                <h3>About Bhairahawa</h3>
+                <p>Bhairahawa (Siddharthanagar) is a gateway city to Lumbini, the birthplace of Lord Buddha. Our mission is to provide visitors with the best travel experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#places">Places</a></li>
+                    <li><a href="index.html#transport">Transportation</a></li>
+                    <li><a href="nightlife.html">Nightlife</a></li>
+                    <li><a href="chatbot.html">Chat</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Nepal Tourism Board</a></li>
+                    <li><a href="#">Lumbini Development Trust</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Subscribe</h3>
+                <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                <form class="footer-subscribe">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit"><i class='bx bx-paper-plane'></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 Bhairahawa Tourism. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <a href="#" class="scroll-top">
+        <i class='bx bx-chevron-up'></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/userMenu.js"></script>
+    <script src="js/darkMode.js"></script>
+
+    <!-- No lazy loading script needed as images are loaded directly -->
+
+    <!-- Preloader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

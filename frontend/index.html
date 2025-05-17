@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Bhairahawa, the gateway to Lumbini - birthplace of Lord Buddha. Find transportation, attractions, and travel tips for your journey.">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Bhairahawa - Gateway to Lumbini | Official Tourism Guide</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/components.css">
+    <link rel="stylesheet" type="text/css" href="css/places.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-hover.css">
+    <link rel="stylesheet" type="text/css" href="css/dark-mode.css">
+
+    <!-- Authentication Check -->
+    <script src="js/authClient.js"></script>
+    <script src="js/authCheck.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <a href="#" class="logo">BHAIR<span>AHAWA</span></a>
+
+        <ul class="navbar">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#places">Places</a></li>
+            <li><a href="#transport">Transport</a></li>
+            <li><a href="nightlife.html">Nightlife</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="h-icons">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button"><i class='bx bx-search'></i></button>
+            </div>
+            <a href="#" class="language-toggle"><i class='bx bx-globe'></i></a>
+            <button id="dark-mode-toggle" class="dark-mode-toggle" title="Switch to Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <div class="user-menu">
+                <span class="user-name" id="user-name">User</span>
+                <a href="bookings.html" class="bookings-btn"><i class='bx bx-calendar-check'></i> Book Transport</a>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="overlay"></div>
+        <div class="home-content">
+            <div class="home-text">
+                <span class="welcome-text">Welcome to</span>
+                <h1>BHAIRAHAWA</h1>
+                <h2>Gateway to Lumbini</h2>
+                <p>Discover the best places to visit in Bhairahawa, the gateway to Lumbini - birthplace of Lord Buddha. Book your transportation and make your journey memorable!</p>
+                <div class="home-btns">
+                    <a href="#places" class="btn">Explore Places</a>
+                    <a href="#transport" class="btn btn-outline home-book-btn"><i class='bx bx-calendar-check'></i> Book Transportation</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"><i class='bx bx-chevrons-down'></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <span>About the City</span>
+            <h2>BHAIRAHAWA</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="about-container">
+            <div class="about-img">
+                <img src="images/main.jpg" alt="Bhairahawa City">
+                <div class="about-highlight">
+                    <div class="highlight-item">
+                        <h3>2.3M+</h3>
+                        <p>Annual Visitors</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>27km</h3>
+                        <p>To Lumbini</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>1997</h3>
+                        <p>Est. Municipality</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Discover Our City</h3>
+                <p>Bhairahawa (also known as Siddharthanagar) is a gateway to one of Nepal's most prized heritage sites, Lumbini, and serves as an important Nepal-India border crossing at Belahiya.</p>
+
+                <h4>What is Bhairahawa famous for?</h4>
+                <p>Bhairahawa is renowned for its cultural diversity and as the main entry point to Lumbini, the birthplace of Lord Buddha. The city has grown into an important commercial and transportation hub with an international airport connecting visitors from around the world.</p>
+
+                <ul class="about-features">
+                    <li><i class='bx bxs-check-circle'></i> Cultural diversity and vibrant markets</li>
+                    <li><i class='bx bxs-check-circle'></i> Gateway to UNESCO World Heritage Site</li>
+                    <li><i class='bx bxs-check-circle'></i> International airport connectivity</li>
+                    <li><i class='bx bxs-check-circle'></i> Warm hospitality and local cuisine</li>
+                </ul>
+
+                <a href="#places" class="btn">Explore Attractions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Section -->
+    <section class="places" id="places">
+        <div class="section-header">
+            <span>Popular Attractions</span>
+            <h2>MUST-VISIT PLACES</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="religious">Religious</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="recreation">Recreation</button>
+            <button class="filter-btn" data-filter="cultural">Cultural</button>
+        </div>
+
+        <div class="places-search">
+            <!-- <input type="text" id="place-search-input" placeholder="Search places...">
+            <button id="place-search-btn"><i class='bx bx-search'></i></button> -->
+        </div>
+
+        <div class="places-grid places-content">
+            <div class="place-card" data-category="religious cultural">
+                <div class="place-img">
+                    <img src="images/lumbini.jpg" alt="Lumbini - Birthplace of Buddha">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 27km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Lumbini</h4>
+                        <h5>UNESCO World Heritage Site</h5>
+                    </div>
+                    <p>The birthplace of Lord Buddha, featuring the sacred garden, Maya Devi Temple, Ashoka Pillar, and numerous international monasteries. A place of pilgrimage for Buddhists worldwide and an important archaeological site.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <span>5.0 (278 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-card" data-category="cultural">
+                <div class="place-img">
+                    <img src="images/airport.jpg" alt="Gautam Buddha International Airport">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 3km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Gautam Buddha International Airport</h4>
+                        <h5>FREE ENTRY</h5>
+                    </div>
+                    <p>Nepal's second international airport, opened in 2022. This modern facility connects Lumbini to international destinations and serves as an important transportation hub for the region.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <span>4.5 (164 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-card" data-category="nature recreation">
+                <div class="place-img">
+                    <img src="images/nuwakot.jpg" alt="Gaighat Scenic Area">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 8km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Nuwakot</h4>
+                        <h5>Best accessed by bike</h5>
+                    </div>
+                    <p>A popular photoshoot destination for locals and visitors alike. Located near Rani-gaun, this scenic area offers beautiful backdrops for photography enthusiasts. The natural setting and peaceful environment make it perfect for creative shoots.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <span>4.5 (93 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-card" data-category="recreation nature">
+                <div class="place-img">
+                    <img src="images/ranimahal.jpeg" alt="Green Park">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 40km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Rani Mahal</h4>
+                        <h5>Near Dhakdhai</h5>
+                    </div>
+                    <p>Rani Mahal, also known as the "Taj Mahal of Nepal," is a historic palace located on the banks of the Kali Gandaki River in Palpa district. It was built in 1897 by General Khadga Shamsher Rana in memory of his beloved wife, Tej Kumari Devi. The palace features a blend of neoclassical and European architectural styles and stands as a symbol of love and loss.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <span>4.0 (127 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-card" data-category="religious cultural">
+                <div class="place-img">
+                    <img src="images/siddhababa.jpg" alt="Mahadev Shiv Mandir">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 4km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Siddha Baba Mandir</h4>
+                        <h5>Temple</h5>
+                    </div>
+                    <p>Siddha Baba Temple is a famous Hindu pilgrimage site located near Butwal in Rupandehi district, Nepal. It is dedicated to Lord Shiva and is situated along the Siddhababa Hill on the East-West Highway. Devotees visit the temple to offer prayers, especially on Mondays and during Shivaratri, believing that wishes made here are fulfilled. The temple is also known for its peaceful natural surroundings.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <span>4.7 (85 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-card" data-category="cultural">
+                <div class="place-img">
+                    <img src="images/bhatbhateni.png" alt="Local Market">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 1km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Bhat-Bhateni Supermarket</h4>
+                        <h5>Modern Shopping Experience</h5>
+                    </div>
+                    <p>Bhat-Bhateni is Nepal's leading supermarket chain, and its Bhairahawa branch offers a wide variety of groceries, clothing, electronics, and household goods in a modern shopping environment.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <span>4.2 (134 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-card" data-category="recreation">
+                <div class="place-img">
+                    <img src="images/tigerresort.jpg" alt="Lumbini Aqua Park">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 15km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Tiger Resort</h4>
+                        <h5>Daunne, Nawalparasi</h5>
+                    </div>
+                    <p>Tiger Resort is a tranquil getaway located near the Daunne hills in Nawalparasi. Surrounded by lush forests, it offers comfortable accommodations and a close-to-nature experience, ideal for travelers exploring the region or passing along the East-West Highway.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <span>4.6 (156 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-card" data-category="recreation nature">
+                <div class="place-img">
+                    <img src="images/cable.jpg" alt="Lumbini Cable Car">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 20km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Lumbini Cable Car</h4>
+                        <h5>Butwal to Basantapur Danda</h5>
+                    </div>
+                    <p>The Lumbini Cable Car connects Butwal to Basantapur Danda, offering scenic views of the surrounding hills and valleys. It provides easy access to religious and tourist destinations and is a popular attraction for visitors seeking a panoramic ride.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <span>4.8 (203 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-card" data-category="religious">
+                <div class="place-img">
+                    <img src="images/bridge.jpg" alt="Siddha Baba Mandir">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 25km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Baglung Suspension Bridge</h4>
+                        <h5>Gandaki Golden Bridge</h5>
+                    </div>
+                    <p>One of the longest pedestrian suspension bridges in the world (567 meters), connecting Baglung and Kusma across the Kali Gandaki River. Offers panoramic views of hills, rivers, and mountains like Dhaulagiri; also near the famous Baglung Kalika Temple.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <span>4.7 (112 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-card" data-category="nature">
+                <div class="place-img">
+                    <img src="images/jharna.jpg" alt="Daunne Hill Station">
+                    <div class="place-overlay">
+                        <span class="place-distance"><i class='bx bx-map'></i> 30km from center</span>
+                    </div>
+                </div>
+                <div class="place-info">
+                    <div class="place-header">
+                        <h4>Jharna</h4>
+                        <h5>Scenic Viewpoint</h5>
+                    </div>
+                    <p>A beautiful hill station offering stunning panoramic views of the surrounding hills and valleys. Visitors come here to enjoy the cool climate, natural beauty, and peaceful environment.</p>
+                    <div class="place-meta">
+                        <div class="star">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <span>4.3 (98 reviews)</span>
+                        </div>
+                        <a href="#" class="btn-small">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-more-container">
+            <a href="#" class="btn btn-outline view-more">View All Attractions</a>
+        </div>
+    </section>
+
+    <!-- Transportation Section -->
+    <section class="transport" id="transport">
+        <div class="section-header">
+            <span>Get Around</span>
+            <h2>TRANSPORTATION OPTIONS</h2>
+            <div class="section-divider"></div>
+            <p>Available from 6:00 am - 10:00 pm daily</p>
+        </div>
+
+        <div class="container-box">
+            <div class="c-mainbox">
+                <div class="container-img">
+                    <i class='bx bx-cycling'></i>
+                </div>
+                <div class="container-text">
+                    <h4>Bike Rentals</h4>
+                    <p>Explore at your own pace</p>
+                    <span class="price">From NPR 500/day</span>
+                </div>
+            </div>
+
+            <div class="c-mainbox">
+                <div class="container-img">
+                    <i class='bx bx-bus'></i>
+                </div>
+                <div class="container-text">
+                    <h4>Bus Services</h4>
+                    <p>Economical group travel</p>
+                    <span class="price">From NPR 100/ticket</span>
+                </div>
+            </div>
+
+            <div class="c-mainbox">
+                <div class="container-img">
+                    <i class='bx bx-car'></i>
+                </div>
+                <div class="container-text">
+                    <h4>Car Rentals</h4>
+                    <p>Comfortable private tours</p>
+                    <span class="price">From NPR 3000/day</span>
+                </div>
+            </div>
+
+            <div class="c-mainbox">
+                <div class="container-img">
+                    <i class='bx bx-tachometer'></i>
+                </div>
+                <div class="container-text">
+                    <h4>E-Rickshaw</h4>
+                    <p>Eco-friendly city travel</p>
+                    <span class="price">From NPR 150/ride</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="transport-info">
+            <p>For transportation inquiries, please contact our office directly at +977 71 520 111 or email us at transport@bhairahawatourism.com</p>
+            <div class="transport-buttons">
+                <a href="bookings.html" class="btn transport-book-btn"><i class='bx bx-calendar-check'></i> Book Transportation</a>
+                <!-- <a href="#contact" class="btn-outline">Contact Us</a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <span>Happy Travelers</span>
+            <h2>WHAT PEOPLE SAY</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="testimonial-slider">
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="images/profile1.jpg" alt="John Smith">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Our visit to Lumbini from Bhairahawa was seamless thanks to the excellent transportation services. The car rental was affordable and our driver was knowledgeable about the area."</p>
+                        <div class="testimonial-author">
+                            <h4>John Smith</h4>
+                            <p>Australia</p>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="images/profile2.jpg" alt="Maya Patel">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"I spent three days exploring Bhairahawa and Lumbini. The bike rental was perfect for getting around and allowed me to discover hidden gems at my own pace. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <h4>Maya Patel</h4>
+                            <p>India</p>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="images/profile3.jpg" alt="David Chen">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"The E-Rickshaw service in Bhairahawa was both eco-friendly and convenient. Our driver was friendly and patient as we explored the local market and temples in the area."</p>
+                        <div class="testimonial-author">
+                            <h4>David Chen</h4>
+                            <p>Singapore</p>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="images/profile4.jpg" alt="Sarah Johnson">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"The cultural tour of Lumbini was an incredible experience. Our guide was very knowledgeable and passionate about the history and significance of each site we visited."</p>
+                        <div class="testimonial-author">
+                            <h4>Sarah Johnson</h4>
+                            <p>United Kingdom</p>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="images/profile5.jpg" alt="Raj Sharma">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Visiting the Gautam Buddha International Airport was a highlight of our trip. The modern facilities and helpful staff made our arrival in Bhairahawa a pleasant experience."</p>
+                        <div class="testimonial-author">
+                            <h4>Raj Sharma</h4>
+                            <p>Nepal</p>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bx-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-img">
+                        <img src="images/profile6.jpg" alt="Lisa Wong">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"The bus service from Bhairahawa to Lumbini was comfortable and punctual. It's a great option for budget travelers who want to explore the region without renting a car."</p>
+                        <div class="testimonial-author">
+                            <h4>Lisa Wong</h4>
+                            <p>Malaysia</p>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="slider-btn prev"><i class='bx bx-chevron-left'></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-btn next"><i class='bx bx-chevron-right'></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Button -->
+    <div class="chatbot-button">
+        <a href="chatbot.html" class="chat-btn">
+            <i class='bx bx-message-dots'></i>
+            <span>Ask Questions</span>
+        </a>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with the latest travel tips, events, and special offers for Bhairahawa and Lumbini.</p>
+                <form id="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span>Get in Touch</span>
+            <h2>CONTACT US</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class='bx bx-map'></i>
+                    <div>
+                        <h4>Our Location</h4>
+                        <p>Tourism Information Center<br>Bank Road, Bhairahawa 32900<br>Rupandehi, Nepal</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class='bx bx-phone'></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+977 71 520 111<br>+977 71 520 222</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class='bx bx-envelope'></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>info@bhairahawatourism.com<br>support@bhairahawatourism.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class='bx bx-time-five'></i>
+                    <div>
+                        <h4>Office Hours</h4>
+                        <p>Sunday - Friday: 9:00 am - 5:00 pm<br>Saturday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-tripadvisor'></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-box">
+                <h3>About Bhairahawa</h3>
+                <p>Bhairahawa (Siddharthanagar) is a gateway city to Lumbini, the birthplace of Lord Buddha. Our mission is to provide visitors with the best travel experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#places">Places</a></li>
+                    <li><a href="#transport">Transportation</a></li>
+                    <li><a href="nightlife.html">Nightlife</a></li>
+                    <li><a href="chatbot.html">Chat</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Nepal Tourism Board</a></li>
+                    <li><a href="#">Lumbini Development Trust</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Subscribe</h3>
+                <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                <form class="footer-subscribe">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit"><i class='bx bx-paper-plane'></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 Bhairahawa Tourism. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <a href="#" class="scroll-top">
+        <i class='bx bx-chevron-up'></i>
+    </a>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/places.css">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/places.js"></script>
+    <script src="js/images.js"></script>
+    <script src="js/testimonials.js"></script>
+    <script src="js/userMenu.js"></script>
+    <script src="js/darkMode.js"></script>
+
+    <!-- Preloader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

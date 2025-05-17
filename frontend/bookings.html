@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book transportation services for Bhairahawa and Lumbini. Easy booking for cars, bikes, buses and more.">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Book Transportation - Bhairahawa Tourism</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/components.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-hover.css">
+    <link rel="stylesheet" type="text/css" href="css/dark-mode.css">
+
+    <style>
+        /* Booking Page Styles */
+        .booking-section {
+            padding: 120px 0 80px;
+            background-color: var(--bg-color);
+        }
+
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .booking-form-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .booking-info-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .booking-form h3 {
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.1);
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .price-display {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 5px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .price-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            margin-top: 10px;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .booking-info {
+            margin-top: 20px;
+        }
+
+        .booking-info h4 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .booking-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .booking-info li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .booking-info li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* My Bookings Section */
+        .my-bookings {
+            margin-top: 40px;
+        }
+
+        .my-bookings h3 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .bookings-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .booking-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .booking-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-card h4 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .booking-details {
+            margin-bottom: 15px;
+        }
+
+        .booking-detail {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .booking-detail:last-child {
+            border-bottom: none;
+        }
+
+        .booking-status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .status-confirmed {
+            background-color: #e6f7e6;
+            color: #28a745;
+        }
+
+        .status-pending {
+            background-color: #fff3cd;
+            color: #ffc107;
+        }
+
+        .status-cancelled {
+            background-color: #f8d7da;
+            color: #dc3545;
+        }
+
+        .booking-actions {
+            margin-top: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-small {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            background-color: #f8f9fa;
+            color: #6c757d;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-small:hover {
+            background-color: #e9ecef;
+            color: #495057;
+        }
+
+        .cancel-booking {
+            background-color: #fff5f5;
+            color: #dc3545;
+            border-color: #f8d7da;
+        }
+
+        .cancel-booking:hover {
+            background-color: #f8d7da;
+            color: #dc3545;
+        }
+
+        .loading-bookings, .error-bookings {
+            text-align: center;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .loading-bookings i, .error-bookings i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .loading-bookings i {
+            color: var(--primary-color);
+        }
+
+        .error-bookings i {
+            color: #dc3545;
+        }
+
+        .no-bookings {
+            text-align: center;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .no-bookings i {
+            font-size: 3rem;
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-form-container,
+            .booking-info-container {
+                padding: 20px;
+            }
+
+            .bookings-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- Authentication Check -->
+    <script src="js/authClient.js"></script>
+    <script src="js/authCheck.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">BHAIR<span>AHAWA</span></a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#places">Places</a></li>
+            <li><a href="index.html#transport">Transport</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="h-icons">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button"><i class='bx bx-search'></i></button>
+            </div>
+            <a href="#" class="language-toggle"><i class='bx bx-globe'></i></a>
+            <button id="dark-mode-toggle" class="dark-mode-toggle" title="Switch to Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <div class="user-menu">
+                <span class="user-name" id="user-name">User</span>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <span>Plan Your Journey</span>
+                <h2>BOOK TRANSPORTATION</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="booking-container">
+                <div class="booking-form-container">
+                    <form id="booking-form" class="booking-form">
+                        <h3>Transportation Booking Form</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="transport-type">Transportation Type*</label>
+                                <select id="transport-type" required>
+                                    <option value="">Select an option</option>
+                                    <option value="bike">Bike Rental</option>
+                                    <option value="bus">Bus Service</option>
+                                    <option value="car">Car Rental</option>
+                                    <option value="rickshaw">E-Rickshaw</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination*</label>
+                                <select id="destination" required>
+                                    <option value="">Select a destination</option>
+                                    <option value="lumbini">Lumbini (27 km)</option>
+                                    <option value="tiger_resort">Tiger Resort, Daunne (35 km)</option>
+                                    <option value="lumbini_cable_car">Lumbini Cable Car (20 km)</option>
+                                    <option value="siddha_baba">Siddha Baba Mandir (25 km)</option>
+                                    <option value="baglung_bridge">Baglung Suspension Bridge (120 km)</option>
+                                    <option value="bhat_bhateni">Bhat-Bhateni Supermarket (1 km)</option>
+                                    <option value="daunne">Daunne (30 km)</option>
+                                    <option value="nuwakot">Nuwakot (8 km)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booking-date">Date*</label>
+                                <input type="date" id="booking-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="passengers">Number of Passengers*</label>
+                                <input type="number" id="passengers" min="1" max="20" value="1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-number">Contact Number*</label>
+                                <input type="tel" id="contact-number" placeholder="Your phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address*</label>
+                                <input type="email" id="email" placeholder="Your email address" required>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="round-trip">
+                                    <label for="round-trip">Round Trip</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests (Optional)</label>
+                            <textarea id="special-requests" placeholder="Any special requirements or notes"></textarea>
+                        </div>
+
+                        <div id="price-display" class="price-display">
+                            <div class="price-item">
+                                <span>Please select transportation type and destination to see pricing</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn">Book Now</button>
+                    </form>
+                </div>
+
+                <div class="booking-info-container">
+                    <div class="booking-info">
+                        <h4>Booking Information</h4>
+                        <ul>
+                            <li>Bookings should be made at least 24 hours in advance</li>
+                            <li>Payment can be made online or at the time of pickup</li>
+                            <li>Cancellations made 12 hours before the scheduled time are eligible for a full refund</li>
+                            <li>For group bookings (more than 10 people), please contact us directly</li>
+                            <li>All prices include basic insurance coverage</li>
+                        </ul>
+                    </div>
+
+                    <div class="booking-info">
+                        <h4>Transportation Options</h4>
+                        <ul>
+                            <li><strong>Bike Rental:</strong> Perfect for solo travelers or couples</li>
+                            <li><strong>Bus Service:</strong> Economical option for groups</li>
+                            <li><strong>Car Rental:</strong> Comfortable travel for families</li>
+                            <li><strong>E-Rickshaw:</strong> Eco-friendly option for short distances</li>
+                        </ul>
+                    </div>
+
+                    <div class="booking-info">
+                        <h4>Popular Destinations</h4>
+                        <ul>
+                            <li><strong>Lumbini:</strong> Birthplace of Lord Buddha (27 km)</li>
+                            <li><strong>Tiger Resort:</strong> Wildlife experience in Daunne (35 km)</li>
+                            <li><strong>Lumbini Cable Car:</strong> Scenic views of the region (20 km)</li>
+                            <li><strong>Siddha Baba Mandir:</strong> Sacred temple (25 km)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Bookings Section -->
+            <div class="my-bookings">
+                <h3>MY BOOKINGS</h3>
+                <div id="bookings-list" class="bookings-list">
+                    <!-- Will be populated by JavaScript -->
+                    <div class="no-bookings">
+                        <i class='bx bx-calendar-x'></i>
+                        <h4>No Bookings Found</h4>
+                        <p>You haven't made any transportation bookings yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-box">
+                <h3>About Bhairahawa</h3>
+                <p>Bhairahawa (Siddharthanagar) is a gateway city to Lumbini, the birthplace of Lord Buddha. Our mission is to provide visitors with the best travel experience.</p>
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#places">Places</a></li>
+                    <li><a href="index.html#transport">Transportation</a></li>
+                    <li><a href="chatbot.html">Chat</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Useful Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Nepal Tourism Board</a></li>
+                    <li><a href="#">Lumbini Development Trust</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>Subscribe</h3>
+                <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                <form class="footer-subscribe">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit"><i class='bx bx-paper-plane'></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 Bhairahawa Tourism. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <a href="#" class="scroll-top">
+        <i class='bx bx-chevron-up'></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+    <script src="js/userMenu.js"></script>
+    <script src="js/darkMode.js"></script>
+
+    <!-- Booking Form Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize bookings
+
+            // Load existing bookings
+            loadBookings();
+
+            // Set min date for booking to today
+            const bookingDateInput = document.getElementById('booking-date');
+            if (bookingDateInput) {
+                const today = new Date();
+                const yyyy = today.getFullYear();
+                const mm = String(today.getMonth() + 1).padStart(2, '0');
+                const dd = String(today.getDate()).padStart(2, '0');
+                const todayString = `${yyyy}-${mm}-${dd}`;
+                bookingDateInput.min = todayString;
+            }
+
+            // Simple price calculator
+            const transportTypeSelect = document.getElementById('transport-type');
+            const destinationSelect = document.getElementById('destination');
+            const passengersInput = document.getElementById('passengers');
+            const roundTripCheckbox = document.getElementById('round-trip');
+            const priceDisplay = document.getElementById('price-display');
+
+            // Base prices and rates
+            const prices = {
+                bike: { base: 500, perKm: 5 },
+                bus: { base: 100, perKm: 2 },
+                car: { base: 3000, perKm: 20 },
+                rickshaw: { base: 150, perKm: 10 }
+            };
+
+            // Distances (in km)
+            const distances = {
+                lumbini: 27,
+                tiger_resort: 35,
+                lumbini_cable_car: 20,
+                siddha_baba: 25,
+                baglung_bridge: 120,
+                bhat_bhateni: 1,
+                daunne: 30,
+                nuwakot: 8
+            };
+
+            // Transport names
+            const transportNames = {
+                bike: 'Bike Rental',
+                bus: 'Bus Service',
+                car: 'Car Rental',
+                rickshaw: 'E-Rickshaw'
+            };
+
+            // Destination names
+            const destinationNames = {
+                lumbini: 'Lumbini',
+                tiger_resort: 'Tiger Resort, Daunne',
+                lumbini_cable_car: 'Lumbini Cable Car',
+                siddha_baba: 'Siddha Baba Mandir',
+                baglung_bridge: 'Baglung Suspension Bridge',
+                bhat_bhateni: 'Bhat-Bhateni Supermarket',
+                daunne: 'Daunne',
+                nuwakot: 'Nuwakot'
+            };
+
+            // Calculate price function
+            function calculatePrice() {
+                const transportType = transportTypeSelect.value;
+                const destination = destinationSelect.value;
+                const passengers = parseInt(passengersInput.value);
+                const roundTrip = roundTripCheckbox.checked;
+
+                if (!transportType || !destination || !passengers) {
+                    priceDisplay.innerHTML = '<div class="price-item"><span>Please select all required fields</span></div>';
+                    return null;
+                }
+
+                // Get base price and rate
+                const basePrice = prices[transportType].base;
+                const distancePrice = distances[destination] * prices[transportType].perKm;
+
+                // Calculate passenger multiplier
+                let passengerMultiplier = 1;
+                if (transportType !== 'bike' && passengers > 1) {
+                    passengerMultiplier = transportType === 'bus' ? 1 : 1 + (passengers - 1) * 0.5;
+                }
+
+                // Calculate total
+                let totalPrice = (basePrice + distancePrice) * passengerMultiplier;
+
+                // Round trip doubles the price
+                if (roundTrip) {
+                    totalPrice *= 2;
+                }
+
+                const priceDetails = {
+                    basePrice,
+                    distancePrice,
+                    passengerMultiplier,
+                    roundTrip,
+                    totalPrice: Math.round(totalPrice)
+                };
+
+                // Update price display
+                priceDisplay.innerHTML = `
+                    <div class="price-item">
+                        <span>Base Price:</span>
+                        <span>NPR ${basePrice}</span>
+                    </div>
+                    <div class="price-item">
+                        <span>Distance Price (${distances[destination]} km):</span>
+                        <span>NPR ${distancePrice}</span>
+                    </div>
+                    ${passengers > 1 ? `
+                    <div class="price-item">
+                        <span>Passenger Adjustment:</span>
+                        <span>x${passengerMultiplier.toFixed(1)}</span>
+                    </div>
+                    ` : ''}
+                    ${roundTrip ? `
+                    <div class="price-item">
+                        <span>Round Trip:</span>
+                        <span>x2</span>
+                    </div>
+                    ` : ''}
+                    <div class="price-total">
+                        <span>Total Price:</span>
+                        <span>NPR ${Math.round(totalPrice)}</span>
+                    </div>
+                `;
+
+                return priceDetails;
+            }
+
+            // Add event listeners for price calculation
+            if (transportTypeSelect) {
+                transportTypeSelect.addEventListener('change', calculatePrice);
+            }
+            if (destinationSelect) {
+                destinationSelect.addEventListener('change', calculatePrice);
+            }
+            if (passengersInput) {
+                passengersInput.addEventListener('input', calculatePrice);
+            }
+            if (roundTripCheckbox) {
+                roundTripCheckbox.addEventListener('change', calculatePrice);
+            }
+
+            // Form submission
+            const bookingForm = document.getElementById('booking-form');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+
+                    // Simple validation
+                    const transportType = transportTypeSelect.value;
+                    const destination = destinationSelect.value;
+                    const bookingDate = bookingDateInput.value;
+                    const passengers = passengersInput.value;
+                    const contactNumber = document.getElementById('contact-number').value;
+                    const email = document.getElementById('email').value;
+                    const roundTrip = document.getElementById('round-trip').checked;
+                    const specialRequests = document.getElementById('special-requests').value;
+
+                    if (!transportType || !destination || !bookingDate || !passengers || !contactNumber || !email) {
+                        alert('Please fill in all required fields');
+                        return;
+                    }
+
+                    // Disable submit button and show loading state
+                    const submitBtn = bookingForm.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.textContent;
+                    submitBtn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Processing...';
+                    submitBtn.disabled = true;
+
+                    try {
+                        // Calculate price
+                        const priceDetails = calculatePrice();
+
+                        // Submit booking to API
+                        const response = await fetch('/api/transport/book', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': window.AuthClient && window.AuthClient.isAuthenticated() ?
+                                    `Bearer ${window.AuthClient.getToken()}` : ''
+                            },
+                            body: JSON.stringify({
+                                transportType,
+                                destination,
+                                bookingDate,
+                                passengers,
+                                contactNumber,
+                                email,
+                                roundTrip,
+                                specialRequests
+                            })
+                        });
+
+                        const data = await response.json();
+
+                        if (response.ok) {
+                            // Create booking object
+                            const booking = {
+                                id: data.bookingId,
+                                transportType,
+                                transportName: transportNames[transportType],
+                                destination,
+                                destinationName: destinationNames[destination],
+                                bookingDate,
+                                passengers,
+                                contactNumber,
+                                email,
+                                roundTrip,
+                                specialRequests,
+                                priceDetails,
+                                status: 'confirmed',
+                                createdAt: new Date().toISOString()
+                            };
+
+                            // Booking is already saved to MongoDB
+
+                            // Show success message
+                            alert(`${data.message}\nBooking ID: ${data.bookingId}`);
+
+                            // Reset form
+                            bookingForm.reset();
+                            priceDisplay.innerHTML = '<div class="price-item"><span>Please select transportation type and destination to see pricing</span></div>';
+
+                            // Reload bookings
+                            loadBookings();
+                        } else {
+                            // Show error message
+                            alert(`Error: ${data.message}`);
+                        }
+                    } catch (error) {
+                        console.error('Error submitting booking:', error);
+                        alert('There was an error processing your booking. Please try again later.');
+                    } finally {
+                        // Reset button state
+                        submitBtn.innerHTML = originalBtnText;
+                        submitBtn.disabled = false;
+                    }
+                });
+            }
+
+            // No need for saveBooking function as we're using MongoDB now
+
+            // Load bookings from API
+            async function loadBookings() {
+                const bookingsList = document.getElementById('bookings-list');
+                if (!bookingsList) return;
+
+                // Show loading state
+                bookingsList.innerHTML = `
+                    <div class="loading-bookings">
+                        <i class='bx bx-loader-alt bx-spin'></i>
+                        <p>Loading your bookings...</p>
+                    </div>
+                `;
+
+                try {
+                    // Fetch bookings from API
+                    const response = await fetch('/api/transport/bookings', {
+                        headers: {
+                            'Authorization': window.AuthClient && window.AuthClient.isAuthenticated() ?
+                                `Bearer ${window.AuthClient.getToken()}` : ''
+                        }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch bookings');
+                    }
+
+                    const bookings = await response.json();
+
+                    if (bookings.length === 0) {
+                        bookingsList.innerHTML = `
+                            <div class="no-bookings">
+                                <i class='bx bx-calendar-x'></i>
+                                <h4>No Bookings Found</h4>
+                                <p>You haven't made any transportation bookings yet.</p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    // Sort bookings by date (newest first)
+                    bookings.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+                    // Clear bookings list
+                    bookingsList.innerHTML = '';
+
+                    // Add bookings to the list
+                    bookings.forEach(booking => {
+                        const bookingCard = document.createElement('div');
+                        bookingCard.className = 'booking-card';
+
+                        const bookingDate = new Date(booking.bookingDate).toLocaleDateString();
+                        const createdDate = new Date(booking.createdAt).toLocaleDateString();
+
+                        bookingCard.innerHTML = `
+                            <h4>${booking.destinationName}</h4>
+                            <div class="booking-details">
+                                <div class="booking-detail">
+                                    <span>Booking ID:</span>
+                                    <span>${booking.id}</span>
+                                </div>
+                                <div class="booking-detail">
+                                    <span>Date:</span>
+                                    <span>${bookingDate}</span>
+                                </div>
+                                <div class="booking-detail">
+                                    <span>Transport:</span>
+                                    <span>${booking.transportName}</span>
+                                </div>
+                                <div class="booking-detail">
+                                    <span>Passengers:</span>
+                                    <span>${booking.passengers}</span>
+                                </div>
+                                <div class="booking-detail">
+                                    <span>Round Trip:</span>
+                                    <span>${booking.roundTrip ? 'Yes' : 'No'}</span>
+                                </div>
+                                <div class="booking-detail">
+                                    <span>Total Price:</span>
+                                    <span>NPR ${booking.priceDetails.totalPrice}</span>
+                                </div>
+                            </div>
+                            <div class="booking-actions">
+                                ${booking.status !== 'cancelled' ? `
+                                <button class="btn-small cancel-booking" data-id="${booking.id}">Cancel Booking</button>
+                                ` : ''}
+                            </div>
+                            <span class="booking-status status-${booking.status}">${booking.status}</span>
+                        `;
+
+                        bookingsList.appendChild(bookingCard);
+
+                        // Add event listener for cancel button
+                        const cancelBtn = bookingCard.querySelector('.cancel-booking');
+                        if (cancelBtn) {
+                            cancelBtn.addEventListener('click', () => cancelBooking(booking.id));
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error loading bookings:', error);
+                    bookingsList.innerHTML = `
+                        <div class="error-bookings">
+                            <i class='bx bx-error-circle'></i>
+                            <h4>Error Loading Bookings</h4>
+                            <p>${error.message}</p>
+                        </div>
+                    `;
+                }
+            }
+
+            // Cancel booking function
+            async function cancelBooking(bookingId) {
+                if (!confirm('Are you sure you want to cancel this booking?')) {
+                    return;
+                }
+
+                try {
+                    const response = await fetch(`/api/transport/booking/${bookingId}/cancel`, {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': window.AuthClient && window.AuthClient.isAuthenticated() ?
+                                `Bearer ${window.AuthClient.getToken()}` : ''
+                        }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Failed to cancel booking');
+                    }
+
+                    alert('Booking cancelled successfully');
+
+                    // Reload bookings
+                    loadBookings();
+                } catch (error) {
+                    console.error('Error cancelling booking:', error);
+                    alert(`Error cancelling booking: ${error.message}`);
+                }
+            }
+        });
+    </script>
+
+    <!-- Preloader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

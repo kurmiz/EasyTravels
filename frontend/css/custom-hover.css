@@ -1,0 +1,94 @@
+/**
+ * Custom Hover Effects for Bhairahawa Tourism Website
+ * This file contains custom hover effects for specific elements
+ */
+
+/* Login Username Hover Effect */
+#loginUsername:focus,
+#loginUsername:hover {
+    border-color: #ff9100;
+    box-shadow: 0 0 0 3px rgba(255, 145, 0, 0.2);
+    background-color: #fffaf0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section Buttons Hover Effects */
+.home-btns .btn:hover {
+    background-color: #e67e00; /* Darker orange */
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 145, 0, 0.3);
+}
+
+.home-btns .btn-outline:hover {
+    background-color: white;
+    color: #ff9100;
+    border-color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Explore Places Button Hover Effect */
+.about-text .btn:hover {
+    background-color: #e67e00; /* Darker orange */
+    color: white;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 145, 0, 0.3);
+}
+
+/* Book Transportation Button Hover Effect */
+#booking-submit:hover,
+.transport-book-btn:hover {
+    background-color: #e67e00; /* Darker orange */
+    color: white !important; /* Force white text on hover */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(255, 145, 0, 0.3);
+}
+
+/* Ask Questions Button Hover Effect (Chatbot) */
+.question-btn:hover {
+    background-color: rgba(255, 145, 0, 0.1);
+    color: #ff9100;
+    border-color: #ff9100;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 145, 0, 0.2);
+}
+
+/* Explore Attractions Button Hover Effect */
+.view-more-container .btn:hover {
+    background-color: #ff9100;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 145, 0, 0.3);
+}
+
+/* Filter Buttons Hover Effect */
+.filter-btn:hover {
+    background-color: rgba(255, 145, 0, 0.9);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 145, 0, 0.2);
+}
+
+/* Place Card Details Button Hover Effect */
+.place-meta .btn-small:hover {
+    background-color: #ff9100;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(255, 145, 0, 0.2);
+}
+
+/* Navbar Links Hover Effect */
+.navbar a:hover {
+    color: #ff9100;
+    text-shadow: 0 0 1px rgba(255, 145, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Login Button Hover Effect */
+.login-btn:hover {
+    background-color: #e67e00;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 145, 0, 0.3);
+}

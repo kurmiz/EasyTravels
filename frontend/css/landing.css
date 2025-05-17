@@ -1,0 +1,246 @@
+/**
+ * Landing Page Styles for Bhairahawa Tourism Website
+ */
+
+/* ===== LANDING SECTION ===== */
+.landing-section {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+.landing-container {
+    width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+/* Content Side */
+.landing-content {
+    padding: var(--spacing-xxl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing-logo {
+    margin-bottom: var(--spacing-xl);
+}
+
+.landing-logo h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.landing-logo h1 span {
+    color: var(--primary-color);
+}
+
+.landing-logo h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.landing-text {
+    margin-bottom: var(--spacing-xl);
+}
+
+.landing-text p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.landing-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.landing-buttons .btn {
+    flex: 1;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.landing-buttons .login-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.landing-buttons .login-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.landing-buttons .signup-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Features */
+.landing-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    background-color: rgba(255, 145, 0, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.feature-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.feature-text p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Image Side */
+.landing-image {
+    position: relative;
+    height: 100%;
+    min-height: 600px;
+}
+
+.landing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}
+
+/* Footer */
+.landing-footer {
+    background-color: transparent;
+    padding: var(--spacing-md) 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.landing-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.landing-footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.landing-footer .social-icons {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.landing-footer .social-icons a {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: var(--transition-normal);
+}
+
+.landing-footer .social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 992px) {
+    .landing-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+    
+    .landing-image {
+        display: none;
+    }
+    
+    .landing-content {
+        padding: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 576px) {
+    .landing-section {
+        padding: var(--spacing-md);
+    }
+    
+    .landing-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .landing-logo h1 {
+        font-size: 2.5rem;
+    }
+    
+    .landing-buttons {
+        flex-direction: column;
+    }
+    
+    .landing-footer .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.landing-content {
+    animation: fadeIn 0.5s ease-out;
+}

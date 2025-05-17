@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chat with our AI assistant to get answers about Bhairahawa and Lumbini tourism.">
+    <title>Bhairahawa Tourism Chatbot | Get Instant Answers</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/components.css">
+    <link rel="stylesheet" type="text/css" href="css/chatbot.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-hover.css">
+    <link rel="stylesheet" type="text/css" href="css/dark-mode.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <a href="index.html" class="logo">BHAIR<span>AHAWA</span></a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#places">Places</a></li>
+            <li><a href="index.html#transport">Transport</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="chatbot.html" class="active">Chat</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="h-icons">
+            <a href="#" class="language-toggle"><i class='bx bx-globe'></i></a>
+            <button id="dark-mode-toggle" class="dark-mode-toggle" title="Switch to Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot-section">
+        <div class="section-header">
+            <span>Ask Me Anything</span>
+            <h2>TOURISM ASSISTANT</h2>
+            <div class="section-divider"></div>
+            <p>Get instant answers to your questions about Bhairahawa and Lumbini</p>
+        </div>
+
+        <div class="chatbot-container">
+            <div class="chatbot-wrapper">
+                <div class="chatbot-header">
+                    <div class="chatbot-avatar">
+                        <div class="fixed-robot">
+                            <div class="speech-bubble">
+                                <span>Hi there!</span>
+                            </div>
+                            <div class="robot-head">
+                                <div class="robot-antenna"></div>
+                                <div class="robot-face">
+                                    <div class="robot-screen">
+                                        <div class="robot-eyes">
+                                            <div class="eye left"></div>
+                                            <div class="eye right"></div>
+                                        </div>
+                                        <div class="robot-mouth"></div>
+                                    </div>
+                                </div>
+                                <div class="robot-ears">
+                                    <div class="ear left"></div>
+                                    <div class="ear right"></div>
+                                </div>
+                            </div>
+                            <div class="robot-body">
+                                <div class="robot-arms">
+                                    <div class="arm left"></div>
+                                    <div class="arm right"></div>
+                                </div>
+                            </div>
+                            <div class="robot-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="chatbot-info">
+                        <h3>Bhairahawa Guide</h3>
+                        <p>Tourism Assistant</p>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p>👋 Hello! I'm your Bhairahawa Tourism Assistant. How can I help you today?</p>
+                        </div>
+                        <span class="message-time">Just now</span>
+                    </div>
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p>You can ask me about:</p>
+                            <ul>
+                                <li>Places to visit in Bhairahawa and Lumbini</li>
+                                <li>Transportation options</li>
+                                <li>Accommodation</li>
+                                <li>Best time to visit</li>
+                                <li>Local customs and culture</li>
+                            </ul>
+                        </div>
+                        <span class="message-time">Just now</span>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="suggested-questions">
+                        <button class="question-btn" data-question="How far is Lumbini from Bhairahawa?">How far is Lumbini?</button>
+                        <button class="question-btn" data-question="Tell me about Lumbini Aqua Park">Lumbini Aqua Park</button>
+                        <button class="question-btn" data-question="What is Lumbini Cable Car?">Lumbini Cable Car</button>
+                        <button class="question-btn" data-question="Tell me about Siddha Baba Mandir">Siddha Baba Mandir</button>
+                        <button class="question-btn" data-question="What can I see in Daunne?">Daunne</button>
+                        <button class="question-btn" data-question="Tell me about Nuwakot">Nuwakot</button>
+                    </div>
+                    <div class="chat-input-wrapper">
+                        <input type="text" id="user-input" placeholder="Type your question here..." autocomplete="off">
+                        <button id="send-btn"><i class='bx bx-send'></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chatbot-info-panel">
+                <div class="info-panel-header">
+                    <h3>Frequently Asked Questions</h3>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How far is Lumbini from Bhairahawa?</h4>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lumbini is approximately 27 kilometers (about 17 miles) from Bhairahawa. The journey typically takes around 45 minutes by car or taxi. Bus services are also available and take about an hour.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What are the operating hours for transportation?</h4>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most transportation services in Bhairahawa operate from 6:00 am to 10:00 pm daily. Some services may be available 24/7 with advance booking, especially for airport transfers.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How many days should I plan for visiting Lumbini?</h4>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We recommend allocating at least 3-4 days to properly explore Lumbini and surrounding attractions. This gives you enough time to visit the Maya Devi Temple, Ashoka Pillar, meditation parks, the various international monasteries, and other nearby attractions like Lumbini Aqua Park, Lumbini Cable Car, Siddha Baba Mandir, Daunne, and Nuwakot.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What is the best time to visit?</h4>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The best time to visit Bhairahawa and Lumbini is from October to March when the weather is pleasant with temperatures ranging from 15°C to 25°C (59°F to 77°F).</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What other attractions are near Lumbini?</h4>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Besides the main Lumbini complex, nearby attractions include Lumbini Aqua Park (water park), Lumbini Cable Car (scenic ride), Siddha Baba Mandir (temple), Daunne (hill station), and Nuwakot (historical site). These can be visited as day trips from Bhairahawa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2023 Bhairahawa Tourism. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-home">
+        <i class='bx bx-home'></i>
+        <span>Back to Home</span>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/openrouter-api.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/images.js"></script>
+    <script src="js/darkMode.js"></script>
+
+    <!-- Preloader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
